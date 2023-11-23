@@ -1,4 +1,4 @@
-var yourName = document.querySelector('#yourname')
+// var yourName = document.querySelector('#yourname')
 var inputval = document.querySelector('#cityinput')
 var btn = document.querySelector('#add');
 var city = document.querySelector('#cityoutput')
@@ -12,13 +12,13 @@ function convertion(val)
 }
 btn.addEventListener('click', function()
 {
-  fetch('https://api.openweathermap.org/data/2.5/weather?q='+yourName.value+inputval.value+'&appid='+apik)
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputval.value+'&appid='+apik)
   .then(res => res.json())
 
 
   .then(data => 
   {
-    var yourName= data['yourname']
+    // var yourName= data['yourname']
     var nameval = data['name']
     var descrip = data['weather']['0']['description']
     var tempature = data['main']['temp']
